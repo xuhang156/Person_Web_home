@@ -1,0 +1,152 @@
+﻿/*公共样式*/
+body {
+	background-color: grey;
+}
+
+@media screen and (max-width:960px) {
+	body {
+		background-color: red;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	body {
+		background-color: orange;
+	}
+
+}
+
+@media screen and (max-width:550px) {
+	body {
+		background-color: yellow;
+	}
+
+}
+
+@media screen and (max-width:320px) {
+	body {
+		background-color: green;
+	}
+
+}
+
+* {
+	padding: 0;
+	margin: 0; /*外边距为零*/
+}
+
+body {
+	font-size: 15px;
+	font-family: "Microsoft YaHei";
+}
+
+li {
+	list-style: none;
+}
+
+i {
+	font-style: normal;
+}
+
+/*清除浮动*/
+.clearf::after {
+	content: "";
+	display: block;
+	clear: both;
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+	zoom: 0;	/*最后一个为了兼容IE*/
+}
+
+/*头部样式*/
+.Cheader_inner {
+	background-color: black;
+}
+
+/*对那个按钮进行修饰，直接定义一个id，然后将这个Id添加进去*/
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+a {
+
+	/*文本没有下划线*/
+	text-decoration: none;
+	color: white;	/*外边框为0*/
+	outline: none;
+}
+
+/*单独给列表标签来写样式*/
+.menu_list li {
+	float: left;
+}
+
+/*设置超链接样式*/
+.menu_list li a {
+	display: block;
+	padding: 15px 20px;
+}
+
+.menu_list li.Cactive {
+	background: green;
+}
+
+/*CSS3中直接使用伪类样式就可以对鼠标悬停进行背景设计*/
+.menu_list li a:hover {
+	background: yellow;
+}
+
+/*按钮样式修饰*/
+.Cbtn {
+
+	/*填充轮廓*/
+	padding: 8px;	/*变圆角*/
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-top: 7px;
+	outline: none;
+	border: 2px solid white;
+	display: none;
+}
+
+.Cbtn .i-con {
+	display: block;
+	width: 25px;
+	height: 1px;
+	background: white;
+	margin: 3px;
+}
+
+
+#bigImgDiv
+{
+	font-family: "华文细黑";
+	font-size: 50px;
+	text-align:center;
+	width:100vw;
+	height:100vh; 	
+	float: right;
+  	//background: #F8EFB7;
+  	//background:url(img/background.jpg);
+    background-size:cover;				//这个属性真好
+	margin: 0px auto;
+	opacity: 0.5;
+}
+#div_text
+{
+	font-family: "华文细黑";
+	font-size: 50px;
+	text-align:center;
+	background: #F1F0F0;
+	width:30%;
+	height:20%; 
+	margin:400px auto;
+	vertical-align: middle;
+	opacity: 0.6;
+}
