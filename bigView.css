@@ -1,0 +1,71 @@
+* {
+	padding: 0;
+	margin: 0; /*外边距为零*/
+}
+
+body {
+	background-color: grey;
+}
+.rightImg
+{
+	background:#F8CF89;
+	float: right;
+	width: 1500px;
+	height: 1000px;
+	margin: 20px 10px auto;
+	padding: 0px;
+}
+.right_btn
+{
+	float: left;
+	width: 150px;
+	height: 100%;
+	background: #C9A4FC;
+}
+.right_btn_img
+{
+	position:relative;
+	top: 30%;
+	left: 0px;
+	margin: 0 auto;
+	background: #4BF3F8;
+	width: 150px;
+	height: 100px;
+
+	border-radius: 30px 0 0 30px ;
+	transition:border-radius 3s;
+	-moz-transition:border-radius 3s; /* Firefox 4 */
+	-webkit-transition:border-radius 3s; /* Safari and Chrome */	
+	-o-transition:border-radius 3s; /* Opera */
+
+	transition:width 2s;
+	-moz-transition:width 2s; /* Firefox 4 */
+	-webkit-transition:width 2s; /* Safari and Chrome */	
+	-o-transition:width 2s; /* Opera */
+	margin-right: 0px;
+	margin-top: 7px;
+}
+.right_btn_img:hover
+{
+	border-radius: 30px 0 0 70px ;
+	width: 130px;
+}
+.right_text
+{
+	float: right;
+	background: #586CF9;
+	width: 1350px;
+	height: 100%;
+}
+.leftImg
+{
+/*	position: absolute;		//绝对定位
+	left: 30px;
+  	top: 20px;*/
+  	float: left;
+	background:#F8CF89;
+	width: 1500px;
+	height: 1000px;
+	margin: 20px auto;
+	padding: 10px;
+}
