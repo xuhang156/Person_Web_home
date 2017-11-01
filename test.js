@@ -1,5 +1,6 @@
 var times = 0;
 var imgarray=new Array(3);
+var is_show=true;
 imgarray[0]="img/background.jpg";
 imgarray[1]="img/background2.jpg";
 imgarray[2]="img/background3.jpg";
@@ -19,12 +20,12 @@ function changeWindowSize()
 	// 获取窗体的宽度
 	var linklarge=document.getElementById("Ibtn");
 	var listStyle=document.getElementById("menu_ul").getElementsByTagName("li");
-
+	var menushow = document.getElementById('menu_ul');
 	//console.log('获取到的size 是'+ listStyle);
 
 	if(linklarge == null || listStyle == null)
 	{
-		//console.log('未获取到按钮或者未获取到list');
+		console.log('未获取到按钮或者未获取到list');
 		return;
 	}
 
@@ -35,6 +36,7 @@ function changeWindowSize()
 			if(linklarge.length != 0)
 			{
 				linklarge.style.display  = "block";
+
 				for (var i = 0; i < listStyle.length; i++) {
 					listStyle[i].style.cssFloat = 'none';
 				}
@@ -44,6 +46,7 @@ function changeWindowSize()
 	{
 			//console.log('已经到达800');
 			linklarge.style.display = "none";
+			menushow.style.display = 'block';
 			for (var i = 0; i < listStyle.length; i++) {
 					listStyle[i].style.cssFloat = 'left';
 				}
@@ -64,6 +67,10 @@ function allMouseEvent()
 	}
 	btn.onmouseout = function() {
 		BtnClick("out");
+	}
+	btn.onclick = function()
+	{
+		BtnClick("click");
 	}
 }
 //按钮事件 
@@ -108,6 +115,10 @@ function BtnClick(event)
 				btn_line[i].style.background = '#FFFFFF';
 			}
 		}
+		if (event == "click") {
+			var hidden = new Btn_ctl_menu_display();
+			hidden.checkshow();
+		}
 
 	}
 }
@@ -115,7 +126,6 @@ function BtnClick(event)
 
 function showalert() 
 { 
-	console.log(times);
 	if (times == 3) { times = 0;}
 	ImgChangeWhenWindowChange(imgarray[times]);
 	times++;
@@ -135,4 +145,28 @@ function ImgChangeWhenWindowChange(imgsrc)
 	//mydiv.style.backgroundImage = 'url(img/background.jpg)';
 	
 	mydiv.style.backgroundImage = "url(" + imgsrc +")";
+}
+
+//闭包实现点击按钮后对菜单栏的显示和隐藏
+function Btn_ctl_menu_display() 
+{
+	this.checkshow = function() {
+		// body...
+		var menu = document.getElementById('menu_ul');
+		console.log('点击按钮进入处理的函数中');
+		if (menu == null) {
+			console.log('未获取到菜单栏');
+			return;
+		}
+		if (is_show) 
+		{
+			is_show = false;
+			menu.style.display = 'none';
+		}
+		else {
+			is_show = true;
+			menu.style.display = 'block';
+		}
+
+	}
 }

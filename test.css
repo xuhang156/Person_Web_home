@@ -3,7 +3,7 @@ body {
 	background-color: grey;
 }
 
-@media screen and (max-width:960px) {
+/*@media screen and (max-width:960px) {
 	body {
 		background-color: red;
 	}
@@ -30,7 +30,7 @@ body {
 	}
 
 }
-
+*/
 * {
 	padding: 0;
 	margin: 0; /*外边距为零*/
@@ -82,9 +82,15 @@ a {
 	outline: none;
 }
 
+
+#menu_ul
+{
+	//display: none;
+}
 /*单独给列表标签来写样式*/
 .menu_list li {
 	float: left;
+	//display: none;
 }
 
 /*设置超链接样式*/
@@ -124,6 +130,14 @@ a {
 }
 
 
+#Logos
+{
+	float: left;
+	color: #FFFFFF;
+	padding: 15px 20px;
+
+}
+
 #bigImgDiv
 {
 	font-family: "华文细黑";
@@ -131,22 +145,51 @@ a {
 	text-align:center;
 	width:100vw;
 	height:100vh; 	
-	float: right;
+	float: left;
   	//background: #F8EFB7;
   	//background:url(img/background.jpg);
     background-size:cover;				//这个属性真好
 	margin: 0px auto;
 	opacity: 0.5;
 }
+#bigImgDiv_left
+{
+	float: left;
+	font-family: "华文细黑";
+	//text-align:center;
+	//background: #F1F0F0;
+	width:20%;
+	height:20%; 
+	margin:100px auto;
+	//vertical-align: middle;
+	//opacity: 0.1;
+}
 #div_text
 {
-	font-family: "华文细黑";
-	font-size: 50px;
 	text-align:center;
-	background: #F1F0F0;
-	width:30%;
+	//background: #F1F0F0;
+	width:20%;
 	height:20%; 
-	margin:400px auto;
+	margin:100px auto;
+	//vertical-align: middle;
+	//opacity: 0.1;
+}
+.text_h3
+{
+	font-family: "华文细黑";
+	color: black;
+	font-size: 30px;
+	text-align:center;
 	vertical-align: middle;
-	opacity: 0.6;
+}
+#big_ImgDiv_right
+{
+	float: right;
+	text-align:center;
+	//background: #F1F0F0;
+	width:20%;
+	height:20%; 
+	margin:100px auto;
+	//vertical-align: middle;
+	//opacity: 0.1;
 }
